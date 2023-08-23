@@ -14,12 +14,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
-  hydrated_bloc: ^8.1.0
-  intl: ^0.17.0
+  hydrated_bloc: ^9.1.2
+  intl: ^0.18.1
   path_provider: ^2.0.9
 
 dev_dependencies:
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.2
   flutter_test:
     sdk: flutter
 

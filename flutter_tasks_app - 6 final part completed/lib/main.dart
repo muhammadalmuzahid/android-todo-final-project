@@ -7,7 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'blocs/bloc_exports.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+ /* WidgetsFlutterBinding.ensureInitialized();
 
   final storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
@@ -18,7 +18,12 @@ void main() async {
       appRouter: AppRouter(),
     )),
     storage: storage,
+  );*/
+  WidgetsFlutterBinding.ensureInitialized();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: await getTemporaryDirectory(),
   );
+  runApp(MyApp(appRouter: AppRouter()));
 }
 
 class MyApp extends StatelessWidget {
